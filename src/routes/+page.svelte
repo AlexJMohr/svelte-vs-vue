@@ -1,20 +1,20 @@
 <script>
-  import { HighlightSvelte } from "svelte-highlight";
-  import { HighlightAuto } from "svelte-highlight";
-  import Markdown from "svelte-exmarkdown";
-  import highlightStyle from "svelte-highlight/styles/gruvbox-dark-soft";
-  import dedent from "dedent";
-  // import svelte from "svelte-highlight/languages/typescript";
-  // import vue from "svelte-highlight/languages/vue";
+	import { HighlightSvelte } from 'svelte-highlight';
+	import { HighlightAuto } from 'svelte-highlight';
+	import Markdown from 'svelte-exmarkdown';
+	import highlightStyle from 'svelte-highlight/styles/gruvbox-dark-soft';
+	import dedent from 'dedent';
+	// import svelte from "svelte-highlight/languages/typescript";
+	// import vue from "svelte-highlight/languages/vue";
 
-  const sections = [
-    {
-      title: "Hello World (Counter)",
-      description: `
+	const sections = [
+		{
+			title: 'Hello World (Counter)',
+			description: `
         Buttons that increment a counter and displays the count. Showcases basic reactive state and event handling.
       `,
-      svelte: {
-        code: `
+			svelte: {
+				code: `
           <script>
             const count = $state(0)
 
@@ -30,13 +30,13 @@
             Increment with inline handler {count}
           </button>
         `,
-        notes: `
+				notes: `
           - uses browser-native event names:  \`onclick=\`
           - always uses the variable name directly (no \`.value\` needed)
-        `,
-      },
-      vue: {
-        code: `
+        `
+			},
+			vue: {
+				code: `
           <script setup>
             import {ref} from "vue"
 
@@ -56,18 +56,18 @@
             <\/button>
           </template>
         `,
-        notes: `
+				notes: `
           - uses special syntax for event bindings: \`@click=\`
           - use \`.value\` in script, don't use it in template. **big gotcha**
-        `,
-      },
-    },
+        `
+			}
+		},
 
-    {
-      title: "Input Binding",
-      description: `Synchronizing state with an input's value. Not much to say here, just a matter of taste.`,
-      svelte: {
-        code: `
+		{
+			title: 'Input Binding',
+			description: `Synchronizing state with an input's value. Not much to say here, just a matter of taste.`,
+			svelte: {
+				code: `
           <script>
             let name = $state('Dmitry')
             let checked = $state(true)
@@ -79,10 +79,10 @@
           <!-- checkboxes use bind:checked -->
           <input type="checkbox" bind:checked={checked} />
         `,
-        notes: `- \`bind:\` syntax`,
-      },
-      vue: {
-        code: `
+				notes: `- \`bind:\` syntax`
+			},
+			vue: {
+				code: `
           <script setup>
             import {ref} from "vue"
 
@@ -99,17 +99,17 @@
             <input type="checkbox" :value="checked" @input="event => checked = event.target.value">
           </template>
         `,
-        notes: `
+				notes: `
           - v-model attribute (personally not a fan)
-        `,
-      },
-    },
+        `
+			}
+		},
 
-    {
-      title: "Control Flow",
-      description: `Ifs and loops`,
-      svelte: {
-        code: `
+		{
+			title: 'Control Flow',
+			description: `Ifs and loops`,
+			svelte: {
+				code: `
           <!-- if statement -->
           {#if condition}
             <p>it's true</p>
@@ -126,14 +126,14 @@
             <p>there are no items</p>
           {/each}
         `,
-        notes: `
+				notes: `
           - special syntax for control flow
           - small learning curve but at least it's consistent: # to start, : in the middle, / to end
           - control flow can't get lost visually - it's always clear
-        `,
-      },
-      vue: {
-        code: `
+        `
+			},
+			vue: {
+				code: `
           <!-- if statement -->
           <p v-if="condition">it's true</p>
           <p v-else-if="otherCondition">it's something else</p>
@@ -150,18 +150,18 @@
             <p>there are no items</p>
           </div>
         `,
-        notes: `
+				notes: `
           - special attributes v-if, v-for, etc
           - control flow can get lost in a sea of other attributes on the same element
-        `,
-      },
-    },
+        `
+			}
+		},
 
-    {
-      title: "Deep State Reactivity / Object Mutability",
-      description: `Reactivity with objects (or arrays)`,
-      svelte: {
-        code: `
+		{
+			title: 'Deep State Reactivity / Object Mutability',
+			description: `Reactivity with objects (or arrays)`,
+			svelte: {
+				code: `
           <script>
             let item = $state({id: 1, name: "foo"})
             item.name = "bar";
@@ -169,10 +169,10 @@
 
           <p>{item.id}: {item.name}</p>
         `,
-        notes: `- $state is used for both primives and objects`,
-      },
-      vue: {
-        code: `
+				notes: `- $state is used for both primives and objects`
+			},
+			vue: {
+				code: `
           <script setup>
             import {reactive} from "vue"
 
@@ -184,20 +184,20 @@
             <p>{{ item.id }}: {{ item.name }}</p>
           </template>
         `,
-        notes: `
+				notes: `
         - for objects, use \`reactive()\`
         - for primitive values (strings, numbers), use \`ref()\`
         - have to remember to use ref or reactive - **big gotcha**
-        `,
-      },
-    },
+        `
+			}
+		},
 
-    {
-      title: "Derived state",
-      description:
-        "Deriving state from other state with calculations. Not too different between Svelte and Vue, so matter of taste.",
-      svelte: {
-        code: `
+		{
+			title: 'Derived state',
+			description:
+				'Deriving state from other state with calculations. Not too different between Svelte and Vue, so matter of taste.',
+			svelte: {
+				code: `
           <script>
             let numbers = $state([1, 2, 3, 4])
             let total = $derived(numbers.reduce((acc, n) => acc + n, 0))
@@ -208,12 +208,12 @@
 
           <p>The total is: {total}</p>
         `,
-        notes: `
+				notes: `
           - don't need callback function in $derived (you can if needed)
-        `,
-      },
-      vue: {
-        code: `
+        `
+			},
+			vue: {
+				code: `
           <script setup>
             import {reactive, computed} from "vue"
             
@@ -228,17 +228,17 @@
             <p>The total is: {{ total }}</p>
           </template>
         `,
-        notes: `
+				notes: `
           - computed() takes a callback function
-        `,
-      },
-    },
+        `
+			}
+		},
 
-    {
-      title: "Components Props",
-      description: `Passing values to custom components.`,
-      svelte: {
-        code: `
+		{
+			title: 'Components Props',
+			description: `Passing values to custom components.`,
+			svelte: {
+				code: `
           <!-- Person.svelte -->
           <script>
             let {name} = $props()
@@ -255,13 +255,13 @@
           <!-- or shorthand: -->
           <Person {name} />
         `,
-        notes: `
+				notes: `
           - declare props with \`$props()\`
           - pass in with \`name={name}\` or \`{name}\` shorthand if prop name and variable name are the same
-        `,
-      },
-      vue: {
-        code: `
+        `
+			},
+			vue: {
+				code: `
           <!-- Person.vue -->
           <script setup>
             const {name} = defineProps(['name'])
@@ -281,72 +281,118 @@
             <!-- there is no shorthand -->
           </template>
         `,
-        notes: `
+				notes: `
           - declare props with \`defineProps()\`
+        `
+			}
+		},
+
+		{
+			title: 'Async (Promises)',
+			description: `Waiting for a promise to resolve, displaying loading state, and handling errors.`,
+			svelte: {
+				code: `
+          <script>
+            let promise = fetch("...")
+          <\/script>
+
+          {#await promise}
+            <p>Loading...</p>
+          {:then data}
+            <p>{data}</p>
+          {:catch error}
+            <p>{error}</p>
+          {/await}
         `,
-      },
-    },
-  ];
+				notes: `
+          - built-in await block which captures data, error, and loading states
+        `
+			},
+			vue: {
+				code: `
+          <script setup>
+            import {ref} from "vue"
+
+            let loading = ref(true)
+            let data = ref(null)
+            let error = ref(null)
+            let promise = fetch("...")
+              .then(d => data.value = d)
+              .catch(e => error.value = e)
+              .finally(() => loading.value = false)
+          <\/script>
+
+          <p v-if="loading">Loading...</p>
+          <p v-if="data">{{ data }}</p>
+          <p v-if="error">{{ error }}</p>
+        `,
+				notes: `
+          - Vue has no built-in promise support in templates
+          - Have to build something custom with refs
+        `
+			}
+		}
+	];
 </script>
 
 <svelte:head>
-  {@html highlightStyle}
+	{@html highlightStyle}
 </svelte:head>
 
 <main>
-  <h1>Svelte vs Vue</h1>
-  {#each sections as section}
-    <section>
-      <h2 class="section-header">{section.title}</h2>
-      <Markdown md={dedent(section.description)} />
-      <div class="side-by-side">
-        <div>
-          <b>Svelte</b>
-          <HighlightSvelte code={dedent(section.svelte.code)} />
-        </div>
-        <div>
-          <b>Vue</b>
-          <HighlightAuto code={dedent(section.vue.code)} />
-        </div>
-        <div>
-          {#if section.svelte.notes}
-            <Markdown md={dedent(section.svelte.notes)} />
-          {/if}
-        </div>
-        <div>
-          {#if section.vue.notes}
-            <Markdown md={dedent(section.vue.notes)} />
-          {/if}
-        </div>
-      </div>
-    </section>
-  {/each}
+	<h1>Svelte vs Vue</h1>
+	{#each sections as section}
+		<section>
+			<h2 class="section-header">{section.title}</h2>
+			<Markdown md={dedent(section.description)} />
+			<div class="side-by-side">
+				<div>
+					<b>Svelte</b>
+					<HighlightSvelte code={dedent(section.svelte.code)} />
+				</div>
+				<div>
+					<b>Vue</b>
+					<HighlightAuto code={dedent(section.vue.code)} />
+				</div>
+				<div>
+					{#if section.svelte.notes}
+						<Markdown md={dedent(section.svelte.notes)} />
+					{/if}
+				</div>
+				<div>
+					{#if section.vue.notes}
+						<Markdown md={dedent(section.vue.notes)} />
+					{/if}
+				</div>
+			</div>
+		</section>
+	{/each}
 </main>
 
 <style>
-  main {
-    max-inline-size: 1100px;
-    margin: 0 auto;
-    padding-bottom: 5rem;
-  }
+	main {
+		max-inline-size: 1100px;
+		margin: 0 auto;
+		padding-bottom: 5rem;
+	}
 
-  section {
-    min-height: 100vh;
-    margin-block: 5rem;
-  }
+	section {
+		min-height: 100vh;
+		margin-block: 5rem;
+	}
 
-  .side-by-side {
-    display: grid;
-    column-gap: 1rem;
-    grid-template-columns: 1fr 1fr;
-  }
+	.side-by-side {
+		display: grid;
+		column-gap: 1rem;
+		grid-template-columns: 1fr 1fr;
+	}
 
-  .side-by-side > div {
-    overflow-x: auto;
-  }
+	.side-by-side > div {
+		overflow-x: auto;
+	}
 
-  h1,
-  h2 {
-    text-align: center;
-  }
+	h1,
+	h2 {
+		text-align: center;
+	}
 </style>
