@@ -248,6 +248,8 @@
 
           <!-- usage -->
           <script>
+            import Person from "./Person.svelte"
+
             let name = "Dmitry"
           <\/script>
 
@@ -273,6 +275,8 @@
 
           <!-- usage: -->
           <script setup>
+            import Person from "./Person.vue"
+
             let name = "Dmitry"
           <\/script>
 
