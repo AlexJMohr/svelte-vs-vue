@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="./_app/immutable/assets/0.CkODzJ0D.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/2.D_IPYERJ.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.CJfBNjIv.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.NGT9a9mI.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/runtime.D8YmjaZ9.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.iS0hOIWi.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.CH7zA30E.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/store.RfQChSI-.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/disclose-version.DwNWKA30.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-client.CDE38BVS.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.CICkleT1.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/legacy.BvECsryl.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/slot.B6ILmTsz.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.CQisA-sZ.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/lifecycle.CmwIfbv8.js"><!--[--><!----><style>pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}
+/*!
+  Theme: Gruvbox dark, soft
+  Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+  License: ~ MIT (or more permissive) [via base16-schemes-source]
+  Maintainer: @highlightjs/core-team
+  Version: 2021.09.0
+*/pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#d5c4a1;background:#32302f}.hljs::selection,
+.hljs ::selection{background-color:#504945;color:#d5c4a1}.hljs-comment{color:#665c54}.hljs-tag{color:#bdae93}.hljs-subst,
+.hljs-punctuation,
+.hljs-operator{color:#d5c4a1}.hljs-operator{opacity:0.7}.hljs-bullet,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-deletion{color:#fb4934}.hljs-symbol,
+.hljs-number,
+.hljs-link,
+.hljs-attr,
+.hljs-variable.constant_,
+.hljs-literal{color:#fe8019}.hljs-title,
+.hljs-class .hljs-title,
+.hljs-title.class_{color:#fabd2f}.hljs-strong{font-weight:bold;color:#fabd2f}.hljs-code,
+.hljs-addition,
+.hljs-title.class_.inherited__,
+.hljs-string{color:#b8bb26}.hljs-built_in,
+.hljs-doctag,
+.hljs-quote,
+.hljs-keyword.hljs-atrule,
+.hljs-regexp{color:#8ec07c}.hljs-function .hljs-title,
+.hljs-attribute,
+.ruby .hljs-property,
+.hljs-title.function_,
+.hljs-section{color:#83a598}.hljs-type,
+.hljs-template-tag,
+.diff .hljs-meta,
+.hljs-keyword{color:#d3869b}.hljs-emphasis{color:#d3869b;font-style:italic}.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-meta .hljs-string{color:#d65d0e}.hljs-meta .hljs-keyword,
+.hljs-meta-keyword{font-weight:bold}</style><!----><!--]-->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[--><!----><!----><!----><main class="svelte-1pvcwvl"><h1 class="svelte-1pvcwvl">Svelte vs Vue</h1> <!--[--><section class="svelte-1pvcwvl"><h2 class="section-header svelte-1pvcwvl">Hello World (Counter)</h2> <!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><p ><!--[--><!--[!--><!--[!--><!--[-->Buttons that increment a counter and displays the count. Showcases basic reactive state and event handling.<!--]--><!--]--><!--]--><!--]--><!----></p><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!----> <div class="side-by-side svelte-1pvcwvl"><div class="svelte-1pvcwvl"><b>Svelte</b> <!----><pre data-language="svelte" class="svelte-1w9vok"><code class="hljs"><!--[--><!----><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
+  <span class="hljs-keyword">const</span> count = $state(<span class="hljs-number">0</span>)
+
+  <span class="hljs-keyword">function</span> <span class="hljs-title function_">increment</span>(<span class="hljs-params"></span>) </span></span><span class="hljs-template-variable">{
+    count += 1
+  }</span><span class="language-xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onclick</span>=</span></span><span class="hljs-template-variable">{increment}</span><span class="language-xml"><span class="hljs-tag">&gt;</span>
+  Increment with function </span><span class="hljs-template-variable">{count}</span><span class="language-xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onclick</span>=</span></span><span class="hljs-template-variable">{() =&gt; count += 1}</span><span class="language-xml"><span class="hljs-tag">&gt;</span>
+  Increment with inline handler </span><span class="hljs-template-variable">{count}</span><span class="language-xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span><!----><!--]--></code></pre><!----><!----></div> <div class="svelte-1pvcwvl"><b>Vue</b> <!----><pre data-language="handlebars" class="svelte-1w9vok"><code class="hljs"><!--[--><!----><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">setup</span>&gt;</span><span class="language-javascript">
+  <span class="hljs-keyword">import</span> {ref} <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>
+
+  <span class="hljs-keyword">const</span> count = <span class="hljs-title function_">ref</span>(<span class="hljs-number">0</span>)
+
+  <span class="hljs-keyword">function</span> <span class="hljs-title function_">increment</span>(<span class="hljs-params"></span>) {
+    count.<span class="hljs-property">value</span> += <span class="hljs-number">1</span>  <span class="hljs-comment">// NOTICE: .value needed in script</span>
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;increment&quot;</span>&gt;</span>
+    Increment with function </span><span class="hljs-template-variable">{{ <span class="hljs-name">count</span> }}</span><span class="language-xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;count += 1&quot;</span>&gt;</span> <span class="hljs-comment">&lt;!-- NOTICE: no .value --&gt;</span>
+    Increment with inline handler </span><span class="hljs-template-variable">{{ <span class="hljs-name">count</span> }}</span><span class="language-xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></span><!----><!--]--></code></pre><!----><!----></div> <div class="svelte-1pvcwvl"><!--[--><!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><ul ><!--[--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->uses browser-native event names:  <!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><code ><!--[--><!--[!--><!--[!--><!--[-->onclick=<!--]--><!--]--><!--]--><!--]--><!----></code><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->always uses the variable name directly (no <!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><code ><!--[--><!--[!--><!--[!--><!--[-->.value<!--]--><!--]--><!--]--><!--]--><!----></code><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[--> needed)<!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--]--><!----></ul><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--></div> <div class="svelte-1pvcwvl"><!--[--><!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><ul ><!--[--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->uses special syntax for event bindings: <!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><code ><!--[--><!--[!--><!--[!--><!--[-->@click=<!--]--><!--]--><!--]--><!--]--><!----></code><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->use <!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><code ><!--[--><!--[!--><!--[!--><!--[-->.value<!--]--><!--]--><!--]--><!--]--><!----></code><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[--> in script, don't use it in template. <!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><strong ><!--[--><!--[!--><!--[!--><!--[-->big gotcha<!--]--><!--]--><!--]--><!--]--><!----></strong><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--]--><!----></ul><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--></div></div></section><section class="svelte-1pvcwvl"><h2 class="section-header svelte-1pvcwvl">Input Binding</h2> <!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><p ><!--[--><!--[!--><!--[!--><!--[-->Synchronizing state with an input's value. Not much to say here, just a matter of taste.<!--]--><!--]--><!--]--><!--]--><!----></p><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!----> <div class="side-by-side svelte-1pvcwvl"><div class="svelte-1pvcwvl"><b>Svelte</b> <!----><pre data-language="svelte" class="svelte-1w9vok"><code class="hljs"><!--[--><!----><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
+  <span class="hljs-keyword">let</span> name = $state(<span class="hljs-string">&#x27;Dmitry&#x27;</span>)
+  <span class="hljs-keyword">let</span> checked = $state(<span class="hljs-literal">true</span>)
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- bind:value for input, textarea, select, etc --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">bind:value</span>=<span class="hljs-string">{name}</span> /&gt;</span>
+
+<span class="hljs-comment">&lt;!-- checkboxes use bind:checked --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">bind:checked</span>=<span class="hljs-string">{checked}</span> /&gt;</span><!----><!--]--></code></pre><!----><!----></div> <div class="svelte-1pvcwvl"><b>Vue</b> <!----><pre data-language="dust" class="svelte-1w9vok"><code class="hljs"><!--[--><!----><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">setup</span>&gt;</span><span class="language-javascript">
+  <span class="hljs-keyword">import</span> </span></span><span class="hljs-template-variable">{ref}</span><span class="language-xml"><span class="language-javascript"> <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>
+
+  <span class="hljs-keyword">let</span> name = <span class="hljs-title function_">ref</span>(<span class="hljs-string">&#x27;Dmitry&#x27;</span>)
+  <span class="hljs-keyword">let</span> checked = <span class="hljs-title function_">ref</span>(<span class="hljs-literal">false</span>)
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;name&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;checked&quot;</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- long form: --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">&quot;name&quot;</span> @<span class="hljs-attr">input</span>=<span class="hljs-string">&quot;event =&gt; name = event.target.value&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">:value</span>=<span class="hljs-string">&quot;checked&quot;</span> @<span class="hljs-attr">input</span>=<span class="hljs-string">&quot;event =&gt; checked = event.target.value&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></span><!----><!--]--></code></pre><!----><!----></div> <div class="svelte-1pvcwvl"><!--[--><!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><ul ><!--[--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><code ><!--[--><!--[!--><!--[!--><!--[-->bind:<!--]--><!--]--><!--]--><!--]--><!----></code><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[--> syntax<!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--]--><!----></ul><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--></div> <div class="svelte-1pvcwvl"><!--[--><!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><ul ><!--[--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->v-model attribute (personally not a fan)<!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--]--><!----></ul><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--></div></div></section><section class="svelte-1pvcwvl"><h2 class="section-header svelte-1pvcwvl">Control Flow</h2> <!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><p ><!--[--><!--[!--><!--[!--><!--[-->Ifs and loops<!--]--><!--]--><!--]--><!--]--><!----></p><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!----> <div class="side-by-side svelte-1pvcwvl"><div class="svelte-1pvcwvl"><b>Svelte</b> <!----><pre data-language="svelte" class="svelte-1w9vok"><code class="hljs"><!--[--><!----><span class="language-xml"><span class="hljs-comment">&lt;!-- if statement --&gt;</span>
+</span><span class="hljs-template-tag">{#<span class="hljs-name">if</span> condition}</span><span class="language-xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>it&#x27;s true<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</span><span class="hljs-template-variable">{:else <span class="hljs-keyword">if</span> otherCondition}</span><span class="language-xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>it&#x27;s something else<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</span><span class="hljs-template-variable">{:else}</span><span class="language-xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>it&#x27;s nothing<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</span><span class="hljs-template-tag">{/<span class="hljs-name">if</span>}</span><span class="language-xml">
+
+<span class="hljs-comment">&lt;!-- each loop --&gt;</span>
+</span><span class="hljs-template-tag">{#<span class="hljs-name">each</span> items as item}</span><span class="language-xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{item}</span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</span><span class="hljs-template-variable">{:else}</span><span class="language-xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>there are no items<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</span><span class="hljs-template-tag">{/<span class="hljs-name">each</span>}</span><!----><!--]--></code></pre><!----><!----></div> <div class="svelte-1pvcwvl"><b>Vue</b> <!----><pre data-language="handlebars" class="svelte-1w9vok"><code class="hljs"><!--[--><!----><span class="language-xml"><span class="hljs-comment">&lt;!-- if statement --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;condition&quot;</span>&gt;</span>it&#x27;s true<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">&quot;otherCondition&quot;</span>&gt;</span>it&#x27;s something else<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-else</span>=<span class="hljs-string">&quot;otherCondition&quot;</span>&gt;</span>it&#x27;s nothing<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- for loop --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;item in items&quot;</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">item</span> }}</span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- empty check. there is no &quot;else&quot; so have to wrap in v-if --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;items.length &gt; 0&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;item in items&quot;</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">item</span> }}</span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-else</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>there are no items<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><!----><!--]--></code></pre><!----><!----></div> <div class="svelte-1pvcwvl"><!--[--><!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><ul ><!--[--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->special syntax for control flow<!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->small learning curve but at least it's consistent: # to start, : in the middle, / to end<!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->control flow can't get lost visually - it's always clear<!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--]--><!----></ul><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--></div> <div class="svelte-1pvcwvl"><!--[--><!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><ul ><!--[--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->special attributes v-if, v-for, etc<!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->control flow can get lost in a sea of other attributes on the same element<!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--]--><!----></ul><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--></div></div></section><section class="svelte-1pvcwvl"><h2 class="section-header svelte-1pvcwvl">Deep State Reactivity / Object Mutability</h2> <!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><p ><!--[--><!--[!--><!--[!--><!--[-->Reactivity with objects (or arrays)<!--]--><!--]--><!--]--><!--]--><!----></p><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!----> <div class="side-by-side svelte-1pvcwvl"><div class="svelte-1pvcwvl"><b>Svelte</b> <!----><pre data-language="svelte" class="svelte-1w9vok"><code class="hljs"><!--[--><!----><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
+  <span class="hljs-keyword">let</span> item = $state(</span></span><span class="language-xquery"><span class="hljs-built_in">{id</span>: <span class="hljs-number">1</span>,<span class="hljs-built_in"> name</span>: <span class="hljs-string">&quot;foo&quot;</span>}</span><span class="language-xml"><span class="language-javascript">)
+  item.<span class="hljs-property">name</span> = <span class="hljs-string">&quot;bar&quot;</span>;
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+
+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="language-xquery">{<span class="hljs-type">item</span><span class="hljs-built_in">.id</span>}</span><span class="language-xml">: </span><span class="language-xquery">{<span class="hljs-type">item</span><span class="hljs-built_in">.name</span>}</span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span><!----><!--]--></code></pre><!----><!----></div> <div class="svelte-1pvcwvl"><b>Vue</b> <!----><pre data-language="handlebars" class="svelte-1w9vok"><code class="hljs"><!--[--><!----><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">setup</span>&gt;</span><span class="language-javascript">
+  <span class="hljs-keyword">import</span> {reactive} <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>
+
+  <span class="hljs-keyword">let</span> item = <span class="hljs-title function_">reactive</span>({<span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;foo&quot;</span>})
+  item.<span class="hljs-property">value</span>.<span class="hljs-property">name</span> = <span class="hljs-string">&quot;bar&quot;</span>;
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ <span class="hljs-name">item.id</span> }}</span><span class="language-xml">: </span><span class="hljs-template-variable">{{ <span class="hljs-name">item.name</span> }}</span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></span><!----><!--]--></code></pre><!----><!----></div> <div class="svelte-1pvcwvl"><!--[--><!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><ul ><!--[--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->$state is used for both primives and objects<!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--]--><!----></ul><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--></div> <div class="svelte-1pvcwvl"><!--[--><!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><ul ><!--[--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->for objects, use <!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><code ><!--[--><!--[!--><!--[!--><!--[-->reactive()<!--]--><!--]--><!--]--><!--]--><!----></code><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->for primitive values (strings, numbers), use <!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><code ><!--[--><!--[!--><!--[!--><!--[-->ref()<!--]--><!--]--><!--]--><!--]--><!----></code><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->have to remember to use ref or reactive - <!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><strong ><!--[--><!--[!--><!--[!--><!--[-->big gotcha<!--]--><!--]--><!--]--><!--]--><!----></strong><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--]--><!----></ul><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--></div></div></section><section class="svelte-1pvcwvl"><h2 class="section-header svelte-1pvcwvl">Derived state</h2> <!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><p ><!--[--><!--[!--><!--[!--><!--[-->Deriving state from other state with calculations. Not too different between Svelte and Vue, so matter of taste.<!--]--><!--]--><!--]--><!--]--><!----></p><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!----> <div class="side-by-side svelte-1pvcwvl"><div class="svelte-1pvcwvl"><b>Svelte</b> <!----><pre data-language="svelte" class="svelte-1w9vok"><code class="hljs"><!--[--><!----><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
+  <span class="hljs-keyword">let</span> numbers = $state([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>])
+  <span class="hljs-keyword">let</span> total = $derived(numbers.<span class="hljs-title function_">reduce</span>(<span class="hljs-function">(<span class="hljs-params">acc, n</span>) =&gt;</span> acc + n, <span class="hljs-number">0</span>))
+  <span class="hljs-comment">// total is 5</span>
+  numbers.<span class="hljs-title function_">push</span>(<span class="hljs-number">5</span>);
+  <span class="hljs-comment">// total is now 10</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The total is: </span><span class="hljs-template-variable">{total}</span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span><!----><!--]--></code></pre><!----><!----></div> <div class="svelte-1pvcwvl"><b>Vue</b> <!----><pre data-language="handlebars" class="svelte-1w9vok"><code class="hljs"><!--[--><!----><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">setup</span>&gt;</span><span class="language-javascript">
+  <span class="hljs-keyword">import</span> {reactive, computed} <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>
+  
+  <span class="hljs-keyword">const</span> numbers = <span class="hljs-title function_">reactive</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>])
+  <span class="hljs-keyword">const</span> total = <span class="hljs-title function_">computed</span>(<span class="hljs-function">() =&gt;</span> numbers.<span class="hljs-title function_">reduce</span>(<span class="hljs-function">(<span class="hljs-params">acc, n</span>) =&gt;</span> acc + n, <span class="hljs-number">0</span>))
+  <span class="hljs-comment">// total is 5</span>
+  numbers.<span class="hljs-property">value</span>.<span class="hljs-title function_">push</span>(<span class="hljs-number">5</span>);
+  <span class="hljs-comment">// total is now 10</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The total is: </span><span class="hljs-template-variable">{{ <span class="hljs-name">total</span> }}</span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></span><!----><!--]--></code></pre><!----><!----></div> <div class="svelte-1pvcwvl"><!--[--><!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><ul ><!--[--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->don't need callback function in $derived (you can if needed)<!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--]--><!----></ul><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--></div> <div class="svelte-1pvcwvl"><!--[--><!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><ul ><!--[--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->computed() takes a callback function<!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--]--><!----></ul><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--></div></div></section><section class="svelte-1pvcwvl"><h2 class="section-header svelte-1pvcwvl">Components Props</h2> <!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><p ><!--[--><!--[!--><!--[!--><!--[-->Passing values to custom components.<!--]--><!--]--><!--]--><!--]--><!----></p><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!----> <div class="side-by-side svelte-1pvcwvl"><div class="svelte-1pvcwvl"><b>Svelte</b> <!----><pre data-language="svelte" class="svelte-1w9vok"><code class="hljs"><!--[--><!----><span class="language-xml"><span class="hljs-comment">&lt;!-- Person.svelte --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
+  <span class="hljs-keyword">let</span> </span></span><span class="hljs-template-variable">{name}</span><span class="language-xml"> = $props()
+<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>My name is </span><span class="hljs-template-variable">{name}</span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- usage --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
+  <span class="hljs-keyword">let</span> name = <span class="hljs-string">&quot;Dmitry&quot;</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">Person</span> <span class="hljs-attr">name</span>=</span></span><span class="hljs-template-variable">{name}</span><span class="language-xml"><span class="hljs-tag"> /&gt;</span>
+<span class="hljs-comment">&lt;!-- or shorthand: --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">Person</span> </span></span><span class="hljs-template-variable">{name}</span><span class="language-xml"><span class="hljs-tag"> /&gt;</span></span><!----><!--]--></code></pre><!----><!----></div> <div class="svelte-1pvcwvl"><b>Vue</b> <!----><pre data-language="handlebars" class="svelte-1w9vok"><code class="hljs"><!--[--><!----><span class="language-xml"><span class="hljs-comment">&lt;!-- Person.vue --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">setup</span>&gt;</span><span class="language-javascript">
+  <span class="hljs-keyword">const</span> {name} = <span class="hljs-title function_">defineProps</span>([<span class="hljs-string">&#x27;name&#x27;</span>])
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>My name is </span><span class="hljs-template-variable">{{ <span class="hljs-name">name</span> }}</span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- usage: --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">setup</span>&gt;</span><span class="language-javascript">
+  <span class="hljs-keyword">let</span> name = <span class="hljs-string">&quot;Dmitry&quot;</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Person</span> <span class="hljs-attr">:name</span>=<span class="hljs-string">&quot;name&quot;</span> /&gt;</span>
+  <span class="hljs-comment">&lt;!-- there is no shorthand --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></span><!----><!--]--></code></pre><!----><!----></div> <div class="svelte-1pvcwvl"><!--[--><!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><ul ><!--[--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->declare props with <!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><code ><!--[--><!--[!--><!--[!--><!--[-->$props()<!--]--><!--]--><!--]--><!--]--><!----></code><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->pass in with <!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><code ><!--[--><!--[!--><!--[!--><!--[-->name={name}<!--]--><!--]--><!--]--><!--]--><!----></code><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[--> or <!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><code ><!--[--><!--[!--><!--[!--><!--[-->{name}<!--]--><!--]--><!--]--><!--]--><!----></code><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[--> shorthand if prop name and variable name are the same<!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--]--><!----></ul><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--></div> <div class="svelte-1pvcwvl"><!--[--><!--[--><!--[--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><ul ><!--[--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><li ><!--[--><!--[!--><!--[!--><!--[-->declare props with <!--]--><!--]--><!--]--><!--[!--><!--[--><!--[--><!--[!--><!--[--><!----><code ><!--[--><!--[!--><!--[!--><!--[-->defineProps()<!--]--><!--]--><!--]--><!--]--><!----></code><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!----></li><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--[!--><!--[!--><!--[-->
+<!--]--><!--]--><!--]--><!--]--><!----></ul><!----><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--><!--]--></div></div></section><!--]--></main><!----><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_14t4h18 = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						assets: "/svelte-vs-vue"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.CJfBNjIv.js"),
+						import("./_app/immutable/entry/app.CH7zA30E.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
