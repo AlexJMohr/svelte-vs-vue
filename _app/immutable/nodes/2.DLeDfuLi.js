@@ -190,6 +190,10 @@ https://github.com/highlightjs/highlight.js/issues/2277`),V=v,E=M),B===void 0&&(
             // total is 5
             numbers.push(5);
             // total is now 10
+
+            // NOTE: used to be:
+            $: total = numbers.reduce((acc, n) => acc + n, 0)
+            // but now it's $derived
           <\/script>
 
           <p>The total is: {total}</p>
@@ -221,6 +225,8 @@ https://github.com/highlightjs/highlight.js/issues/2277`),V=v,E=M),B===void 0&&(
 
           <!-- usage -->
           <script>
+            import Person from "./Person.svelte"
+
             let name = "Dmitry"
           <\/script>
 
@@ -239,6 +245,8 @@ https://github.com/highlightjs/highlight.js/issues/2277`),V=v,E=M),B===void 0&&(
 
           <!-- usage: -->
           <script setup>
+            import Person from "./Person.vue"
+
             let name = "Dmitry"
           <\/script>
 

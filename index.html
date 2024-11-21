@@ -7,18 +7,18 @@
 		
 		<link href="./_app/immutable/assets/0.CkODzJ0D.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/2.BfPgoA0Y.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.CKOZ9HiS.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/entry.5Z0rUmRo.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.CYeHeDKC.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.BwyyC2uI.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/runtime.D8YmjaZ9.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.iS0hOIWi.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.RsTTKHQr.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.CJs38Qbu.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/store.RfQChSI-.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/disclose-version.DwNWKA30.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index-client.CDE38BVS.js">
 		<link rel="modulepreload" href="./_app/immutable/nodes/0.CICkleT1.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/legacy.BvECsryl.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/slot.B6ILmTsz.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/2.DKWGyICz.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.DLeDfuLi.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/lifecycle.CmwIfbv8.js"><!--[--><!----><style>pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}
 /*!
   Theme: Gruvbox dark, soft
@@ -185,6 +185,10 @@
   <span class="hljs-comment">// total is 5</span>
   numbers.<span class="hljs-title function_">push</span>(<span class="hljs-number">5</span>);
   <span class="hljs-comment">// total is now 10</span>
+
+  <span class="hljs-comment">// <span class="hljs-doctag">NOTE:</span> used to be:</span>
+  <span class="hljs-attr">$</span>: total = numbers.<span class="hljs-title function_">reduce</span>(<span class="hljs-function">(<span class="hljs-params">acc, n</span>) =&gt;</span> acc + n, <span class="hljs-number">0</span>)
+  <span class="hljs-comment">// but now it&#x27;s $derived</span>
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The total is: </span><span class="hljs-template-variable">{total}</span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span><!----><!--]--></code></pre><!----><!----></div> <div class="svelte-18rpjy9"><b>Vue</b> <!----><pre data-language="handlebars" class="svelte-1w9vok"><code class="hljs"><!--[--><!----><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">setup</span>&gt;</span><span class="language-javascript">
@@ -212,6 +216,8 @@
 
 <span class="hljs-comment">&lt;!-- usage --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
+  <span class="hljs-keyword">import</span> <span class="hljs-title class_">Person</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./Person.svelte&quot;</span>
+
   <span class="hljs-keyword">let</span> name = <span class="hljs-string">&quot;Dmitry&quot;</span>
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
@@ -228,6 +234,8 @@
 
 <span class="hljs-comment">&lt;!-- usage: --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">setup</span>&gt;</span><span class="language-javascript">
+  <span class="hljs-keyword">import</span> <span class="hljs-title class_">Person</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./Person.vue&quot;</span>
+
   <span class="hljs-keyword">let</span> name = <span class="hljs-string">&quot;Dmitry&quot;</span>
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
@@ -272,7 +280,7 @@
 			
 			<script>
 				{
-					__sveltekit_nao4qb = {
+					__sveltekit_18eq6nk = {
 						base: new URL(".", location).pathname.slice(0, -1),
 						assets: "/svelte-vs-vue"
 					};
@@ -282,8 +290,8 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.CKOZ9HiS.js"),
-						import("./_app/immutable/entry/app.RsTTKHQr.js")
+						import("./_app/immutable/entry/start.CYeHeDKC.js"),
+						import("./_app/immutable/entry/app.CJs38Qbu.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2],
