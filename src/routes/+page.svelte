@@ -204,6 +204,10 @@
             // total is 5
             numbers.push(5);
             // total is now 10
+
+            // NOTE: used to be:
+            $: total = numbers.reduce((acc, n) => acc + n, 0)
+            // but now it's $derived
           <\/script>
 
           <p>The total is: {total}</p>
