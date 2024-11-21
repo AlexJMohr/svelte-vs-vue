@@ -374,6 +374,7 @@
 		max-inline-size: 1100px;
 		margin: 0 auto;
 		padding-bottom: 5rem;
+		padding-inline: 1rem;
 	}
 
 	section {
