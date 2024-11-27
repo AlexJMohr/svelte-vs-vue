@@ -4,6 +4,7 @@
 	import Markdown from 'svelte-exmarkdown';
 	import highlightStyle from 'svelte-highlight/styles/gruvbox-dark-soft';
 	import dedent from 'dedent';
+	import { markdown } from 'svelte-highlight/languages';
 	// import svelte from "svelte-highlight/languages/typescript";
 	// import vue from "svelte-highlight/languages/vue";
 
@@ -349,6 +350,15 @@
 
 <main>
 	<h1>Svelte vs Vue</h1>
+	<section>
+		<h2 class="section-header">Things that are the same</h2>
+		<Markdown
+			md={dedent(`
+        - Both are reactive frameworks. The DOM automatically updates when the state changes.
+        - Both have a single file component format. For example: \`Button.svelte\` or \`Button.vue\`.
+      `)}
+		/>
+	</section>
 	{#each sections as section}
 		<section>
 			<h2 class="section-header">{section.title}</h2>
