@@ -396,7 +396,6 @@
 	}
 
 	section {
-		min-height: 100vh;
 		margin-block: 5rem;
 	}
 
